@@ -13,7 +13,7 @@ include "dbh.inc.php";
 
 //Verify if the form is empty in any of the fields
 
-    if(empty('userid') || empty('useremail') || empty('pwd') || empty('pwd-repeat'))
+    if(empty($username) || empty($useremail) || empty($password) || empty($passwordRepeat))
     {
         //if it's empty make a redirect and send the info in the URL
         header("Location: ../signup.php?error=emptyfields&userid=".$username."&email=".$useremail);
