@@ -26,7 +26,7 @@ include "dbh.inc.php";
     {
         header("Location: ../signup.php?error=invalidemailuserid");
         exit();
-    }
+    }   
     else if (!filter_var($useremail, FILTER_VALIDATE_EMAIL))
     {//send username to the field if only email is wrong
         header("Location: ../signup.php?error=invalidemail&userid=".$username); 
